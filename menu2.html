@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js"></script>
+        <script language="javascript" src="js/menu.js"></script>
+        <link rel="stylesheet" href="css/menu2.css" type="text/css">
+        <script type="text/javascript">
+
+        jQuery(document).ready(function() {
+        	$('ul#menuSdr').accordionMenu({openUrl:"#LOR"});
+        	
+        	$( "#close" ).click(function() {
+        		$('ul#menuSdr').accordionMenu("closeMenu");
+        	});
+        	$( "#open" ).click(function() {
+        		$('ul#menuSdr').accordionMenu("openMenu");
+      		});
+        	$( "#openFilm" ).click(function() {
+        		$('ul#menuSdr').accordionMenu("openMenu", "#Film");
+      		});
+        });
+        </script>
+  
+    </head>
+    <body id="home">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+     
+
+        <div class="main-container">
+
+			<div><span id="close">[close all nodes]</span> <span id="open">[open all nodes]</span> <span id="openFilm">[open node Film]</span></div>
+				
+            <nav id="izq">
+				<ul id='menuSdr'>
+					<li ><a href='#'>Home</a></li>
+					<li ><a href='#'>Books</a>
+						<ul>
+							<li ><a href='#'>Fantasy</a>
+								<ul>
+									<li><a href='#LOR'>Lord of the Rings</a></li>
+									<li><a href='#'>Game of Thrones</a></li>
+								</ul>
+							</li>
+							<li ><a href='#'>Terror</a>
+								<ul>
+									<li><a href='#'>Stephen King</a>
+										<ul>
+											<li><a href='#'>The Dead Zone</a></li>
+											<li><a href='#'>It</a></li>
+											<li><a href='#'>Misery</a></li>
+										</ul>
+									</li>
+									<li><a href='#'>Dan Simmons: A Winter Haunting</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li ><a href='#Film'>Films</a>
+						<ul>
+							<li ><a href='#'>Action</a>
+								<ul>
+									<li><a href='#'>Terminator</a></li>
+									<li><a href='#'>The Fifth Element</a></li>
+									<li><a href='#'>Die Hard</a></li>
+								</ul>
+							</li>
+							<li ><a href='#'>Drama</a></li>
+							<li ><a href='#'>Comedy</a></li>
+						</ul>
+					</li>
+					<li ><a href='#'>Music</a>
+
+						<ul>
+							<li ><a href='#'>Pop</a>
+								<ul>
+									<li><a href='#'>Madonna</a></li>
+									<li><a href='#'>Slayer</a></li>
+									<li><a href='#'>Backstreet Boys</a></li>
+								</ul>
+							</li>
+							<li ><a href='#'>Rock</a></li>
+							<li ><a href='#'>Electro</a></li>
+							<li ><a href='#'>Other</a>
+								<ul>
+									<li><a href='http://www.freakfandango.es'>The Freak Fandango Orchestra</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li ><a href='#'>Useless Stuff</a>
+
+						<ul>
+							<li><a href='#'>David Hasselhoffs Homepage</a>
+							<li><a href='#'>Dirty Hungarian Phrasebook</a>
+							<li><a href='#'>Non-pasteurized Caviar</a>
+							<li><a href='#'>Hells Gate</a>
+						</ul>
+					</li>
+					<li ><a href='#'>Party</a></li>
+				</ul>
+			</nav>
+			
+
+        </div> <!-- #main-container -->
+      
+
+      
+    </body>
+</html>
