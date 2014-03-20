@@ -12,4 +12,4 @@ Just another simple accordion menu jquery plugin
  Author: J.Kudla  (kudlaj@gmail.com)
  Version: 0.1.0
 
-<a href="http://http://kudlaj.github.io/accordionMenu">See the Menu</a>
+<a href="http://kudlaj.github.io/accordionMenu/">See the Menu</a>
