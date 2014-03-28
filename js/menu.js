@@ -33,6 +33,7 @@
 				}	else	{
 					active = false;
 				}
+				menu.find("li").removeClass("active");
 				//activate
 				if(active)	{
 					if(level=="level-1")	{
@@ -49,6 +50,7 @@
 						menu.find("a").removeClass("active-element");
 						$(this).addClass("active-element");
 					}
+					$(this).parent("li").addClass("active");
 					$(this).attr("active", "true");
 					menu.find("a").not(this).attr("active", "false");
 					menu.find("ul").children("li").hide();
@@ -58,6 +60,7 @@
 					});
 				//deactivate
 				}	else	{
+					showAllParents($(this).parent("li"), true);
 					if(level!="level-1")	{
 						$(this).removeClass("active-element");
 					}	
@@ -75,7 +78,7 @@
 			});
 			
 			if(params.openUrl!=null&&params.openUrl){
-				var node = this.find("a[href='"+ params.openUrl + "']");
+				var node = this.find("a[href~='"+ params.openUrl + "']");
 				openNode(node);
 			}
 			
@@ -100,7 +103,7 @@
 					showAllParents($(this));
 				});
 			}	else	{
-				var node = this.find("a[href='"+ nomLink + "']");
+				var node = this.find("a[href~='"+ nomLink + "']");
 				openNode(node);
 			}
 			return this;
@@ -121,6 +124,7 @@
 	function openNode(node)	{
 		showAllParents(node.parent("li"), true);
 		node.addClass("active-element");
+		node.parent("li").addClass("active");
 		node.parent("li").children("ul").each(function( index ) {
 			  $(this).children("li").show();
 		});
@@ -139,6 +143,7 @@
 		node.show();
 		if(markAsActive != undefined && markAsActive)	{
 			node.children("a").addClass("active-element");
+			node.addClass("active");
 		}
 		var level = node.attr("name");
 
