@@ -62,7 +62,7 @@
 				}	else	{
 					if(level!="level-1")	{
 						$(this).removeClass("active-element");
-						showAllParents($(this).parent("li"), true);
+						showAllParents($(this).parent("li").parent("ul").parent("li"), true);
 					}	
 					$(this).parent("li").children("ul").each(function( index ) {
 						  $(this).children("li").slideUp('fast', function() {
