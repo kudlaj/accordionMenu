@@ -60,9 +60,9 @@
 					});
 				//deactivate
 				}	else	{
-					showAllParents($(this).parent("li"), true);
 					if(level!="level-1")	{
 						$(this).removeClass("active-element");
+						showAllParents($(this).parent("li"), true);
 					}	
 					$(this).parent("li").children("ul").each(function( index ) {
 						  $(this).children("li").slideUp('fast', function() {
